@@ -34,6 +34,8 @@ Deliver the calendar as a table with these columns:
 | Date | Platform | Format | Pillar | Hook or title | What happens | Goal | Call to action | Status |
 |---|---|---|---|---|---|---|---|---|
 
+Drop columns that carry no information for this user (Platform when there is only one, Status in a plan nothing has been made for yet).
+
 Plan in detail two to four weeks ahead; beyond that, plan themes only, since results should change what gets made. When asked for a month, give all rows with real hooks, then offer to write out the scripts and captions.
 
 Use real dates when the user gives a start date. Account for their local weekend, holidays and cultural or religious seasons relevant to the audience.
@@ -42,10 +44,13 @@ Use real dates when the user gives a start date. Account for their local weekend
 
 **Solo creator, about 5 hours a week, short video first**
 
-- 3 short videos (2 teach, 1 story or proof), each cross-posted natively to a second platform
+- 3 short videos (2 teach, 1 story or proof)
 - 1 carousel or text post made from the week's best idea
-- Daily: 10 to 15 minutes of replies and engaging in the niche
-- One 2-hour batch session to film, one 1.5-hour session to edit and schedule, 30 minutes for ideas and review
+- One 1.5-hour session to script and film, one 1.5-hour session to edit, design and schedule (3 hours)
+- 10 minutes of replies and engaging in the niche on six days (1 hour)
+- 20 minutes for ideas and the weekly numbers
+- Total about 4 hours 20 minutes, leaving slack for a bad week
+- From the second month, upload the same videos clean to a second platform (about 15 minutes a week from the slack)
 
 **Business owner, about 8 hours a week, leads as the goal**
 

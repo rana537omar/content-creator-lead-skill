@@ -122,6 +122,8 @@ Structure a strategy as three phases with a review at the end of each.
 - **Days 31 to 60, focus**: keep the two or three pillars and formats that performed, turn the best into series, start the secondary platform by repurposing, begin collecting emails.
 - **Days 61 to 90, convert and systemise**: add regular offer content, collaborations, batch production, templates and a monthly review habit.
 
+An account starting from zero has no follower metrics worth watching in the first month; watch how much of each video is watched and shares plus saves per view, then follows per view, then leads.
+
 For each phase state: what gets published, the one metric being watched, and what decision the review will make. Give expectations as ranges with assumptions, never as promises.
 
 ## 9. Common strategy mistakes

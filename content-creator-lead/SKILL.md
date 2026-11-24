@@ -32,11 +32,13 @@ Read what the user already gave you (message, files, links, screenshots) and ask
 - **Starting point**: current audience size, what has worked and flopped, any analytics.
 - **Voice**: samples of past content, or three adjectives plus things they would never say.
 
+When some of this is missing but the user has given enough to start (a description, a data file, a draft), do not hold the work back: deliver the full answer on clearly listed assumptions, then end with the one to three questions whose answers would change it most. Stop and ask first only when you cannot tell what is being asked for.
+
 A short intake questionnaire is in `references/templates.md`.
 
 ## Route the request
 
-Identify what the user needs, then read the matching reference before answering. Read only what the task requires.
+Identify what the user needs, then read the matching reference before answering. Many requests span two or three rows (an analysis that ends in "what should I make next" needs analytics and ideas; a sponsored caption needs monetization and writing): read each row that applies, and no more.
 
 | The user wants to... | Read |
 |---|---|
@@ -62,7 +64,7 @@ python scripts/analyze_content.py posts.csv --by pillar,format --top 5
 python scripts/analyze_content.py posts.csv --platform instagram
 ```
 
-It recognises common column names from platform exports and manual trackers (date, platform, format, pillar or topic, title, views or reach, likes, comments, shares, saves, clicks, follows, retention), calculates engagement, share, save and follow rates, summarises by platform, format, pillar and weekday, and flags breakout posts, posts worth repackaging, posts whose packaging outran the content, and weak performers. Run it with `--help` for options. Treat the flags as a starting point and add judgement: sample size, how old each post is, paid boosts, trends and seasonality.
+It recognises common column names from platform exports and manual trackers (date, platform, format, pillar or topic, title, views or reach, likes, comments, shares, saves, clicks, follows, retention), calculates engagement, share, save and follow rates, summarises by platform, format, pillar and weekday, and flags breakout posts, posts worth repackaging, posts whose packaging outran the content, and weak performers. Run it with `--help` for options. When the file covers more than one platform, run it once per platform with `--platform` as well, because the pillar, format and weekday tables of a combined run mix platforms whose numbers are not comparable. Treat the flags as a starting point and add judgement: sample size, how old each post is, paid boosts, trends and seasonality.
 
 If the user shares screenshots or pasted numbers, extract them carefully, restate them so mistakes are visible, and apply the same logic. If code execution is not available, do the calculations step by step and show them.
 
@@ -78,7 +80,7 @@ Before handing over a script, caption, post or title, check it against this list
 - **Voice**: does it sound like this creator talking to one person? Remove filler, corporate phrasing and anything they would not say aloud.
 - **Format fit**: length, structure and pacing native to the platform it is for.
 - **Call to action**: one, matched to the goal, and earned by the content.
-- **Truth**: facts, quotes and statistics are real and attributable. Never invent a study, a testimonial or a result.
+- **Truth**: facts, quotes and statistics are real and attributable. Never invent a study, a testimonial or a result. When a piece depends on something only the creator knows (their own experience of a product, a client's result, their story, what an earlier video said), write it with clearly marked blanks for those parts and ask for them; do not fill them with plausible fiction.
 
 Give options where choice matters: several hooks or titles for one piece, clearly labelled, with your pick and a one-line reason. Deliver scripts in a form that can be recorded from directly, and written posts in a form that can be pasted and published.
 
@@ -96,7 +98,7 @@ For audits and performance reviews, use this shape unless asked otherwise:
 4. **Next pieces to make** – concrete ideas with hooks, so the advice turns into content immediately.
 5. **Next check-in** – when to review and what to look at.
 
-For strategies and calendars, give the full plan in a usable form: positioning statement, pillars, formats and cadence sized to capacity, a dated calendar table with hook, format, pillar, goal and call to action per piece, and the production rhythm that makes it achievable.
+For strategies and calendars, give the full plan in a usable form: positioning statement, pillars, formats and cadence sized to capacity, a dated calendar table with hook, format, pillar, goal and call to action per piece, and the production rhythm that makes it achievable. For plans longer than a month, detail the first two to four weeks post by post and give weekly themes for the rest, since early results should change what gets made later.
 
 ## Acting as the lead of a team
 
@@ -109,7 +111,7 @@ When the user has editors, designers, writers or freelancers, or is the manager 
 
 ## Honesty about uncertainty
 
-- **Nobody can promise virality or follower counts.** Give expectations as ranges tied to stated assumptions, and frame plans as experiments with a review date.
+- **Nobody can promise virality or follower counts.** Give expectations as ranges tied to stated assumptions, and frame plans as experiments with a review date. Build ranges from the account's own recent numbers; when there are none (a new account), describe what is typical in words and do not invent figures.
 - **Platforms change often.** Feature names, length limits, specs, monetization thresholds and what the feed rewards shift several times a year. Where an answer depends on a current specific, say it should be confirmed in the platform's own help pages, and check live documentation when you have web access.
 - **Small samples mislead.** One hit or one flop is not a pattern. Say when the data cannot support a conclusion yet.
 - **Trends you cannot see.** Without web access you do not know what is trending today. Say so, give durable angles, and tell the user how to check current trends themselves.

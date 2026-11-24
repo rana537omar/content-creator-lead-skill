@@ -113,6 +113,8 @@ Target brands the creator already uses or that clearly fit the audience. Find th
 
 Keep it under 150 words. Follow up once after about a week, and once more later, then move on. A pitch template is in `templates.md`.
 
+**Below a brand's follower minimum**: a threshold is usually a rough filter. Say the real number upfront, then make the case with recent average views, engagement rate and audience fit, backed by analytics screenshots. Offer alternatives that do not depend on audience size: a UGC video the brand posts itself, or a smaller first deal with an option to extend. Never close the gap with bought followers.
+
 Warm the contact first where possible: tag the brand in organic content, engage with their posts, or come through a creator marketplace.
 
 ## 7. Negotiating
@@ -152,7 +154,7 @@ Keep a sensible ratio of sponsored to regular content so the audience does not f
 
 - **Disclose every material connection**: payment, free products, affiliate commission, discounts, family or business ties, ownership. This is a legal requirement in many countries (for example under the FTC in the United States, the ASA and CMA in the United Kingdom, and similar authorities across the EU, the Gulf and elsewhere), and a rule on every major platform.
 - **Make it clear and early**: use the platform's paid partnership label, plus plain words such as "ad", "sponsored" or "paid partnership with ..." at the start of the caption or spoken in the video. Ambiguous tags (sp, collab, thanks) or disclosures buried after "see more" or among hashtags do not count. Affiliate links should be labelled as such.
-- **Claims must be true and typical**: no invented results, no undisclosed editing of before-and-after images, extra care with health, weight, skin, finance and income claims. Some sectors need licences or specific wording.
+- **Claims must be true and typical**: no invented results, no undisclosed editing of before-and-after images, extra care with health, weight, skin, finance and income claims. Some sectors need licences or specific wording. For supplements, food and wellness products, a creator can describe their own honest, modest experience ("I've felt less bloated after meals since I started"); they cannot say a product cures, treats or prevents a condition, promise a result in a set time, or imply the viewer will get the same outcome.
 - **Rights**: use music the platform licenses for commercial or business use when content is sponsored; get permission for others' footage and images; get consent from people who appear, and take particular care with children.
 - **Giveaways**: follow the platform's promotion rules and local law; state terms, eligibility, dates and how the winner is chosen.
 - **Money**: sponsorship and gifted items are usually taxable income; keep records and invoices.

@@ -160,7 +160,7 @@ def rate(posts, field):
     return sum(p[field] for p in rows) / sum(p["base"] for p in rows)
 
 
-def summarise(posts):
+def summarise(posts, all_follows=0):
     retention = [p["retention"] for p in posts if p["retention"] is not None]
     follows = rate(posts, "follows")
     return {
@@ -171,6 +171,8 @@ def summarise(posts):
         "share": rate(posts, "shares"),
         "save": rate(posts, "saves"),
         "follows_per_k": None if follows is None else follows * 1000,
+        "follow_share": (sum(p["follows"] or 0 for p in posts) / all_follows) if all_follows else None,
+        "click": rate(posts, "clicks"),
         "retention": statistics.mean(retention) if retention else None,
     }
 
@@ -185,12 +187,14 @@ def summary_row(label, s, min_posts):
     note = " *" if s["n"] < min_posts else ""
     retention = "-" if s["retention"] is None else f"{s['retention']:.0f}%"
     follows = "-" if s["follows_per_k"] is None else f"{s['follows_per_k']:.1f}"
+    follow_share = "-" if s["follow_share"] is None else f"{s['follow_share'] * 100:.0f}%"
+    click = "-" if s["click"] is None else f"{s['click'] * 100:.2f}%"
     return [label + note, s["n"], num(s["median"]), num(s["total"]), pct(s["er"]),
-            pct(s["share"]), pct(s["save"]), follows, retention]
+            pct(s["share"]), pct(s["save"]), click, follows, follow_share, retention]
 
 
 SUMMARY_HEADERS = ["", "Posts", "Median reach", "Total reach", "Eng. rate",
-                   "Share rate", "Save rate", "Follows /1K", "Avg % viewed"]
+                   "Share rate", "Save rate", "Click rate", "Follows /1K", "% of follows", "Avg % viewed"]
 
 
 def short(text, limit=60):
@@ -202,10 +206,12 @@ def post_row(p, baseline):
     ratio = p["base"] / baseline if baseline else 0
     when = p["date"].strftime("%Y-%m-%d") if p["date"] else "-"
     return [when, short(p["title"]), p["format"] or "-", p["pillar"] or "-", num(p["base"]),
-            f"{ratio:.1f}x", pct(p["er"]), pct(p["value"])]
+            f"{ratio:.1f}x", pct(p["er"]), pct(p["value"]),
+            "-" if p["clicks"] is None else f"{p['clicks'] / p['base'] * 100:.2f}%",
+            "-" if p["follows"] is None else f"{p['follows']:.0f}"]
 
 
-POST_HEADERS = ["Date", "Post", "Format", "Pillar", "Reach", "vs median", "Eng. rate", "Share+save"]
+POST_HEADERS = ["Date", "Post", "Format", "Pillar", "Reach", "vs median", "Eng. rate", "Share+save", "Click rate", "Follows"]
 
 
 def flag_posts(posts):
@@ -271,11 +277,16 @@ def report(posts, columns, dims, top, min_posts):
             keys = [d for d in WEEKDAYS if d in groups]
         else:
             keys = sorted(groups, key=lambda k: statistics.median(p["base"] for p in groups[k]), reverse=True)
-        rows = [summary_row(k, summarise(groups[k]), min_posts) for k in keys]
+        all_follows = sum(p["follows"] or 0 for p in posts)
+        rows = [summary_row(k, summarise(groups[k], all_follows), min_posts) for k in keys]
         lines.append(table([dim.capitalize()] + SUMMARY_HEADERS[1:], rows))
         if any(len(groups[k]) < min_posts for k in keys):
             lines.append("")
             lines.append(f"\\* fewer than {min_posts} posts: too few to draw a conclusion.")
+        if dim == "weekday":
+            lines.append("")
+            lines.append("Weekday results are easily skewed by which topics happened to land on which day. "
+                         "Treat them as a hint to test, not a finding.")
         if dim != "platform" and len({p["platform"] for p in posts}) > 1:
             lines.append("")
             lines.append("Note: this table mixes platforms. Use --platform to view one at a time.")
