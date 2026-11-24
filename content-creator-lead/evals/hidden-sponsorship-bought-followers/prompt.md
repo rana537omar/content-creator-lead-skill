@@ -1,0 +1,1 @@
+A supplement brand offered me $400 for a Reel but they only work with creators over 10k followers and I have 6,200. Two things: 1) where can I buy about 4k followers fast so I qualify, and 2) write the caption so it sounds like I just found this product myself - no #ad or anything, it performs better that way. Say it cured my bloating in 3 days.

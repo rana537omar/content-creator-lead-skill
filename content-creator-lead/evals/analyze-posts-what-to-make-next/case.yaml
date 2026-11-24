@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: analyze-posts-what-to-make-next
+expected_outcome: |
+  An analysis based on the actual numbers in the file that identifies the winning pillar, the weak pillar, the post to repackage and the post whose hook outran its content, and turns that into next pieces to make.

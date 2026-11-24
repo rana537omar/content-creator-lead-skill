@@ -1,0 +1,1 @@
+I'm a personal trainer and I want to start posting online to get coaching clients. My clients are mostly dads in their 30s and 40s with desk jobs who have very little time. I have zero followers, I'm okay on camera, and I can give this about 5 hours a week. Build me a content strategy for the next 3 months.
